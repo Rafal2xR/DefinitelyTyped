@@ -94,8 +94,7 @@ interface KnockoutValidationRule {
     condition?: () => boolean;
 }
 
-interface KnockoutValidationErrors {
-    (): string[];
+interface KnockoutValidationErrors extends KnockoutObservableArray<string> {
     showAllMessages(): void;
     showAllMessages(show: boolean): void;
 }
